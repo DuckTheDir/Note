@@ -31,6 +31,7 @@ namespace Note
         /// </summary>
         private void InitializeComponent()
         {
+            
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
@@ -159,7 +160,6 @@ namespace Note
             fileMenuStrip.Size = new Size(838, 23);
             fileMenuStrip.TabIndex = 1;
             fileMenuStrip.Text = "fileMenuStrip";
-            fileMenuStrip.ItemClicked += fileMenuStrip_ItemClicked_1;
             // 
             // fToolStripMenuItem
             // 
@@ -171,7 +171,6 @@ namespace Note
             fToolStripMenuItem.Name = "fToolStripMenuItem";
             fToolStripMenuItem.Size = new Size(28, 19);
             fToolStripMenuItem.Text = ".F";
-            fToolStripMenuItem.Click += fToolStripMenuItem_Click;
             // 
             // newToolStripMenuItem
             // 
@@ -227,7 +226,6 @@ namespace Note
             sToolStripMenuItem.Name = "sToolStripMenuItem";
             sToolStripMenuItem.Size = new Size(28, 19);
             sToolStripMenuItem.Text = ".S";
-            sToolStripMenuItem.Click += sToolStripMenuItem_Click;
             // 
             // visualToolStripMenuItem
             // 
@@ -247,7 +245,6 @@ namespace Note
             // 
             openFileDialog1.FileName = "openFileDialog1";
             openFileDialog1.Filter = "Text files (*.txt)|*.txt|JSON files (*.json)|*.json|File files (*.file)|*.file|All files (*.*)|*.*\"";
-            openFileDialog1.FileOk += openFileDialog1_FileOk;
             // 
             // saveFileDialog1
             // 
@@ -260,6 +257,7 @@ namespace Note
             // 
             // Form1
             // 
+            AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(838, 456);
@@ -373,15 +371,15 @@ namespace Note
                 }
             }
         }
-        private Button HideButn;
-        private Button ScreenButn;
-        private Button CLOSE_butn;
-        private Label Name_label;
-        private PictureBox pictureBox1;
-        public Panel panel1;
-        public MenuStrip fileMenuStrip;
-        public ToolStripMenuItem fToolStripMenuItem;
-        public ToolStripMenuItem sToolStripMenuItem;
-        private ToolStripMenuItem xnjToolStripMenuItem;
+        private Button HideButn = new Button();
+        private Button ScreenButn = new Button();
+        private Button CLOSE_butn = new Button();
+        private Label Name_label = new Label();
+        private PictureBox pictureBox1 = new PictureBox();
+        private Panel panel1 = new Panel();
+        private MenuStrip fileMenuStrip = new MenuStrip();
+        private ToolStripMenuItem fToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem sToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem xnjToolStripMenuItem = new ToolStripMenuItem();
     }
 }

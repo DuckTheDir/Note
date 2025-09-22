@@ -44,19 +44,6 @@ namespace Note
             }
         }
 
-
-        
-
-        private void fToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!askForSomething()) return;
@@ -164,25 +151,12 @@ namespace Note
             }
         }
 
-        private void sToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+  
         private void visualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fontDialog1.ShowDialog();
         }
 
-        private void fileMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void fileMenuStrip_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void panelTop_MouseDown(object sender, MouseEventArgs e)
         {
