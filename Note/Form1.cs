@@ -25,11 +25,27 @@ namespace Note
         private bool mod = false;
 
 
-        public Form1()
+        public Form1(string?filePath)
         {
 
 
             InitializeComponent();
+
+            if (!string.IsNullOrEmpty(filePath) && System.IO.File.Exists(filePath))
+            {
+                try
+                {
+                    mainTextBox.Text = System.IO.File.ReadAllText(filePath);
+                    cur_file_path = filePath;
+                    this.Text = "note = " + '"' + Path.GetFileName(filePath) + '"';
+                    Name_label.Text = this.Text;
+                    mod = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("err: " + ex.Message);
+                }
+            }
         }
 
 
@@ -215,12 +231,12 @@ namespace Note
                 else if (e.Delta < 0)
                     newSize -= 1;
 
-                // Clamp between 6 and 72 pt
+               
                 newSize = Math.Max(6, Math.Min(72, newSize));
 
                 mainTextBox.Font = new Font(mainTextBox.Font.FontFamily, newSize, mainTextBox.Font.Style);
 
-                // Prevent normal scrolling
+               
                 ((HandledMouseEventArgs)e).Handled = true;
             }
         }

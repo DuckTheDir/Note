@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <SupportedOSPlatformVersion>8.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <StartupObject></StartupObject>
     <ApplicationIcon>icn.ico</ApplicationIcon>
     <NuGetAuditMode>direct</NuGetAuditMode>
@@ -16,6 +16,20 @@
     <Description>Basic .txt , .file , .json redactor.</Description>
     <Copyright>dirochik,DuckTheDir</Copyright>
     <PackageIcon>icn.png</PackageIcon>
+    <RepositoryUrl>https://github.com/DuckTheDir/Note</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Notepad;note;text redactor;text;json;file</PackageTags>
+    <PackageReleaseNotes>made note.</PackageReleaseNotes>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>8</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>8</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +37,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\..\..\Downloads\license.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\..\assets\icn.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
