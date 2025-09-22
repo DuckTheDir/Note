@@ -3,14 +3,10 @@ namespace Note
 {
     using System;
     using System.Diagnostics;
-    using System.Drawing.Imaging;
     using System.IO;
-    using System.Runtime.InteropServices;
     using System.Runtime.InteropServices;
     using System.Text;
     using System.Windows.Forms;
-    using static System.Net.WebRequestMethods;
-    using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
     public partial class Form1 : Form
     {
