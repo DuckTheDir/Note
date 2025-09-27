@@ -1,2 +1,2 @@
 # Note
-Basic .txt ; .json ; .file redactor.
+Basic .txt ; .json ; .file redactor. Used WinForms.
